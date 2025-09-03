@@ -34,7 +34,7 @@ body {
     gap: 25px;
 }
 
-.buy {
+.download {
     display: inline-flex;
     height: 50px;
     padding: 0;
@@ -50,11 +50,11 @@ body {
     text-align: center;
 }
 
-.buy:hover {
+.download:hover {
     background: #00994C;
 }
 
-.buy:active {
+.download:active {
     background: #009148;
 }
 
