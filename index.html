@@ -37,7 +37,7 @@
                 const latestTag = data.tag_name;
 
                 const downloadBtn = document.getElementById("download-btn");
-                downloadBtn.textContent = `Download (${latestTag})`;
+                downloadBtn.textContent = `Download (v${latestTag})`;
             } catch (err) {
                 console.error("Error fetching latest tag:", err);
             }
