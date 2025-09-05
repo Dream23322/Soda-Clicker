@@ -52,11 +52,11 @@ body {
 }
 
 .download:hover {
-    background: #00994C;
+    background: #a18395;
 }
 
 .download:active {
-    background: #009148;
+    background: #6e6174;
 }
 
 .discord {
@@ -112,7 +112,7 @@ body {
     width: 70%;
     max-width: 800px;
     padding: 20px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(224, 186, 220, 0.7);
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.6);
