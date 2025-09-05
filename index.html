@@ -6,6 +6,8 @@
     <title>Soda Autoclicker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/images/soda.jpg">
+
+
 </head>
 <body>
     <img src="assets/images/banner.png" id="banner">
@@ -26,6 +28,11 @@
         </div>
     </div>
 
+    <div class="changelog" id="changelog">
+        <h2>Changelog</h2>
+        <pre id="changelog-text">Loading changelog...</pre>
+    </div>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -38,12 +45,34 @@
 
                 const downloadBtn = document.getElementById("download-btn");
                 downloadBtn.textContent = `Download (v${latestTag})`;
+
+                const changelogText = data.body || "No changelog provided.";
+                document.getElementById("changelog-text").textContent = changelogText;
             } catch (err) {
                 console.error("Error fetching latest tag:", err);
             }
         }
 
         setLatestTag();
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const banner = document.getElementById("banner");
+            const buttons = document.querySelector(".buttons");
+            const changelog = document.getElementById("changelog");
+
+            if(scrollY > 5) {
+                banner.classList.add("hidden");
+                buttons.classList.add("hidden");
+                changelog.classList.add("visible");
+            } else {
+                banner.classList.remove("hidden");
+                buttons.classList.remove("hidden");
+                changelog.classList.remove("visible");
+            }
+        });
     </script>
+
+    
 </body>
 </html>
