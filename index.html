@@ -71,6 +71,18 @@
                 changelog.classList.remove("visible");
             }
         });
+
+        // Hide changelog on click
+        document.getElementById("changelog").addEventListener("click", () => {
+
+            const banner = document.getElementById("banner");
+            const buttons = document.querySelector(".buttons");
+            const changelog = document.getElementById("changelog");
+            
+            banner.classList.remove("hidden");
+            buttons.classList.remove("hidden");
+            changelog.classList.remove("visible");
+        });
     </script>
 
     
